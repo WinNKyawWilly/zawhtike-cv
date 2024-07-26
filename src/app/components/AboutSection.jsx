@@ -9,18 +9,17 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
-        <li>JavaScript</li>
-        <li>React</li>
+        <li>Paper Crafting</li>
+        <li>Color Theory</li>
+        <li>Art Trainings</li>
+        <li>Visual Documentations</li>
+        <li>Creative Mindset</li>
       </ul>
     ),
   },
   {
-    title: "Education",
-    id: "education",
+    title: "Collaborations",
+    id: "collaborations",
     content: (
       <ul className="list-disc pl-2">
         <li>Fullstack Academy of Code</li>
@@ -29,12 +28,28 @@ const TAB_DATA = [
     ),
   },
   {
-    title: "Certifications",
-    id: "certifications",
+    title: "media",
+    id: "media",
     content: (
       <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
+        <li>Myanmar Celebrities</li>
+        <li>DVB TV</li>
+        <li>Bello ဘယ်လို</li>
+        <li>ပေါ်ပြူလာ</li>
+        <li>စံတော်ချိန်</li>
+        <li>MN TV</li>
+      </ul>
+    ),
+  },
+  {
+    title: "exibitions",
+    id: "exibitions",
+    content: (
+      <ul className="list-disc pl-2">
+        <li>2022 Paper Quilling Art Exibition</li>
+        <li>2023 Paper Quilling Art Exibition</li>
+        <li>Women Clutch Quilling</li>
+        <li>Paper Quilling Workshops</li>
       </ul>
     ),
   },
@@ -53,17 +68,22 @@ const AboutSection = () => {
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" width={500} height={500} />
+        <Image src="/images/about-image.jpg" width={500} height={500} />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+          <Image src="/images/about-profile.jpg" width={400} height={200} />
+          <br/>
+          
+            <p className="text-base lg:text-lg">
+              I'm <span class="highlight">Zaw Htike</span>, a paper quilling artist from Myanmar. Since 2016, I've created colorful art by curling and shaping paper.
           </p>
+          <p className="text-base lg:text-lg">
+              My work has been in shows, and I teach others this unique skill. I love working with different groups to share my art.
+          </p>
+          <p className="text-base lg:text-lg">
+              I'm always trying new ideas to make better art and inspire people. <span class="highlight">Choose me for your project</span>, and together we'll make something special with paper quilling.
+          </p>
+
           <div className="flex flex-row justify-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("skills")}
@@ -73,18 +93,18 @@ const AboutSection = () => {
               Skills{" "}
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange("education")}
-              active={tab === "education"}
+              selectTab={() => handleTabChange("media")}
+              active={tab === "media"}
             >
               {" "}
-              Education{" "}
+              Media mentions{" "}
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
+              selectTab={() => handleTabChange("exibitions")}
+              active={tab === "exibitions"}
             >
               {" "}
-              Certifications{" "}
+              Exibitions{" "}
             </TabButton>
           </div>
           <div className="mt-8">
